@@ -26,8 +26,4 @@ class SchedulesController < ApplicationController
     def destroy
 
     end
-    
-    
-    
-    
 end

@@ -58,7 +58,8 @@ development:
 test:
   <<: *default
   database: cocoa_test
-
+  username: postgres
+  password: 606532
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
@@ -81,5 +82,5 @@ test:
 production:
   <<: *default
   database: cocoa_production
-  username: cocoa_prod
+  username: postgres
   password: <%= ENV['COCOA-TEST_DATABASE_PASSWORD'] %>
