@@ -1,3 +1,25 @@
-<h2>h2. Bootstrap heading</h2>
-
-<a class="btn btn-primary" href="#">Click me</a>
+<h2>Cronogramas</h2>
+<%= link_to "Nueva", new_schedule_path %>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Fecha Inicial</th>
+      <th>Fecha Final</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @schedules.each do |schedule| %>
+      <tr>
+        <td><%= schedule.title %></td>
+        <td><%= schedule.description %></td>
+        <td><%= schedule.publication_date %></td>
+        <td>
+          <%= link_to "Mostrar", schedule %>
+          <%= link_to "Editar", edit_schedule_path(schedule) %>
+          <%= link_to "Eliminar", schedule, method: :delete, data: { confirm: "¿Estás seguro de eliminar este cronograma?" } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

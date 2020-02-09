@@ -1,0 +1,16 @@
+<h2>Nuevo Libro</h2>
+<p>Programa tu semana</p>
+<%= form_for @schedule do |f| %>
+    <div>
+        <%= f.label 'Fecha inicio' %>
+        <%= f.text_field :starts_at %>
+    </div>
+    <div>
+        <%= f.label 'Fecha final' %>
+        <%= f.text_field :ends_at %>
+    </div>
+
+    <div>
+        <%= f.submit %>
+    </div>
+<% end %>
